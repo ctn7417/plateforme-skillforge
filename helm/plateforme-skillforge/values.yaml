@@ -1,0 +1,38 @@
+replicaCount: 1
+
+image:
+  repository: example.com/plateforme-skillforge
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+route:
+  enabled: true
+  host: ""
+  tls:
+    enabled: true
+    termination: edge
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 250m
+    memory: 512Mi
+
+env:
+  DATABASE_URL: "postgresql://user:pass@host:5432/db"
+  MEDIA_ROOT: "/mnt/media"
+  LOG_LEVEL: "info"
+  SECRET_KEY: "change-me"
+
+media:
+  pvc:
+    enabled: true
+    claimName: "skillforge-media"
+    mountPath: "/mnt/media"

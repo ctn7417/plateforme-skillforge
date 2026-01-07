@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "plateforme-skillforge.fullname" . }}
+  labels:
+    {{- include "plateforme-skillforge.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "plateforme-skillforge.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "plateforme-skillforge.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.targetPort }}
+          env:
+            - name: DATABASE_URL
+              value: {{ .Values.env.DATABASE_URL | quote }}
+            - name: MEDIA_ROOT
+              value: {{ .Values.env.MEDIA_ROOT | quote }}
+            - name: LOG_LEVEL
+              value: {{ .Values.env.LOG_LEVEL | quote }}
+            - name: SECRET_KEY
+              value: {{ .Values.env.SECRET_KEY | quote }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            {{- if .Values.media.pvc.enabled }}
+            - name: media
+              mountPath: {{ .Values.media.pvc.mountPath | quote }}
+            {{- end }}
+      volumes:
+        {{- if .Values.media.pvc.enabled }}
+        - name: media
+          persistentVolumeClaim:
+            claimName: {{ .Values.media.pvc.claimName | quote }}
+        {{- end }}
