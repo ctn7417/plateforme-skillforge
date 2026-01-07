@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SkillForge · Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">SF</span>
+          <div>
+            <h1>SkillForge</h1>
+            <p>Plateforme de formation</p>
+          </div>
+        </div>
+        <nav>
+          <a class="active" href="#">Tableau de bord</a>
+          <a href="#">Catalogue</a>
+          <a href="#">Mes parcours</a>
+          <a href="#">Évaluations</a>
+          <a href="#">Support</a>
+        </nav>
+        <div class="profile">
+          <div class="avatar">AM</div>
+          <div>
+            <strong>Amina M.</strong>
+            <span>Apprenante</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h2>Bonjour Amina 👋</h2>
+            <p>Continuez votre parcours Data Analyst.</p>
+          </div>
+          <div class="actions">
+            <button class="ghost">Planifier</button>
+            <button class="primary">Reprendre le cours</button>
+          </div>
+        </header>
+
+        <section class="grid">
+          <article class="card">
+            <h3>Progression globale</h3>
+            <div class="progress">
+              <span>72%</span>
+              <div class="bar"><div class="fill" style="width:72%"></div></div>
+            </div>
+            <p>3 modules restants · prochaine session vendredi</p>
+          </article>
+          <article class="card">
+            <h3>Prochaine évaluation</h3>
+            <p class="metric">Quiz SQL · 12 questions</p>
+            <p class="muted">Temps estimé : 20 min</p>
+            <button class="secondary">Lancer</button>
+          </article>
+          <article class="card">
+            <h3>Notifications</h3>
+            <ul>
+              <li>Nouveau support vidéo ajouté au module 4.</li>
+              <li>Feedback formateur disponible.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="player">
+          <div class="player-header">
+            <div>
+              <h3>Lecture du contenu</h3>
+              <p>Module 3 · Visualisation des données</p>
+            </div>
+            <div class="pill">Streaming sécurisé</div>
+          </div>
+          <div class="player-body">
+            <div class="video">
+              <div class="video-overlay">
+                <span>Lecteur vidéo HLS</span>
+                <button class="primary">Play</button>
+              </div>
+            </div>
+            <div class="playlist">
+              <h4>Ressources</h4>
+              <div class="resource">
+                <span>📘 PDF - Cheatsheet</span>
+                <button class="ghost">Télécharger</button>
+              </div>
+              <div class="resource">
+                <span>🎧 Podcast - Interview expert</span>
+                <button class="ghost">Écouter</button>
+              </div>
+              <div class="resource">
+                <span>🧩 Exercice pratique</span>
+                <button class="ghost">Ouvrir</button>
+              </div>
+              <p class="muted">Liens signés valables 30 min.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid">
+          <article class="card">
+            <h3>Évaluations récentes</h3>
+            <div class="score">
+              <span>85%</span>
+              <p>Analyse exploratoire · 2 tentatives</p>
+            </div>
+            <button class="secondary">Voir le feedback</button>
+          </article>
+          <article class="card">
+            <h3>Tableau de bord formateur</h3>
+            <p class="muted">Accès réservé · rôle formateur</p>
+            <div class="tags">
+              <span>RBAC</span>
+              <span>Analytics</span>
+              <span>Exports</span>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
