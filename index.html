@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skillforge - Lecture de cours</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <aside class="app__sidebar" aria-label="Plan du cours">
+        <header class="sidebar__header">
+          <h1>Plan du cours</h1>
+          <p id="course-title" class="sidebar__subtitle"></p>
+        </header>
+        <nav id="course-outline" class="sidebar__outline"></nav>
+      </aside>
+
+      <main class="app__main" aria-live="polite">
+        <header class="main__header">
+          <div>
+            <p class="main__eyebrow" id="chapter-label"></p>
+            <h2 id="section-title"></h2>
+          </div>
+          <div class="main__actions">
+            <button id="toggle-complete" class="button button--primary" type="button">
+              Marquer comme terminée
+            </button>
+          </div>
+        </header>
+
+        <section class="progress" aria-label="Progression">
+          <div class="progress__item">
+            <div class="progress__label">Lecture</div>
+            <div class="progress__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+              <div id="reading-progress" class="progress__fill"></div>
+            </div>
+            <div id="reading-progress-label" class="progress__value">0 %</div>
+          </div>
+          <div class="progress__item">
+            <div class="progress__label">Complétion</div>
+            <div class="progress__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+              <div id="completion-progress" class="progress__fill progress__fill--success"></div>
+            </div>
+            <div id="completion-progress-label" class="progress__value">0 %</div>
+          </div>
+        </section>
+
+        <article id="content" class="main__content" tabindex="0"></article>
+      </main>
+
+      <aside class="app__notes" aria-label="Notes">
+        <header class="notes__header">
+          <h3>Notes</h3>
+          <p id="notes-context" class="notes__subtitle"></p>
+        </header>
+        <div id="notes-panel"></div>
+      </aside>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
