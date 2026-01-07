@@ -162,6 +162,7 @@ Conserver **le détail des scores** dans un tableau récapitulatif.
 | Responsables | Équipe QA + Tech Lead. | Product Owner + représentants utilisateurs. |
 | Environnement | Intégration/staging contrôlé. | Staging proche production, avec données/flux représentatifs. |
 | Critères d’entrée | Build stable, tests critiques passés, environnement prêt. | Fonctionnalités clés figées, bugs critiques QA résolus. |
+| Livrables | Rapport QA, statut de couverture, risques et dérogations. | Rapport UAT, retours métiers, décision Go/No-Go. |
 | Critères de sortie | Zéro bug bloquant/critique, risques documentés. | Acceptation formelle, dérogations signées si nécessaire. |
 
 ### 2. Couverture minimale
@@ -170,17 +171,20 @@ Conserver **le détail des scores** dans un tableau récapitulatif.
 - **Tests critiques** : authentification, parcours principal, paiements/transactions si applicable, gestion des droits.
 - **Smoke tests** : démarrage application, pages clés, API essentielles, intégration systèmes tiers.
 - **Non-régression** : scénarios des bugs majeurs corrigés, modules à fort risque.
+- **Qualité technique** : erreurs console/serveur, logs, stabilité des intégrations.
 
 #### UAT
 - **Parcours métier prioritaires** : scénarios définis par le PO et les utilisateurs clés.
 - **Validation UX/ergonomie** : cohérence des libellés, navigation, clarté des messages.
 - **Conformité** : règles métiers, exigences légales ou contractuelles.
+- **Acceptance métier** : critères d’acceptation des user stories et résultats attendus.
 
 ### 3. Outils recommandés
 
-- **Automatisation** : Playwright/Cypress pour UI, Postman/Newman pour API.
-- **Tracking** : Jira/Linear/YouTrack avec workflow dédié QA/UAT.
+- **Automatisation** : Playwright/Cypress pour UI, Postman/Newman pour API, tests CI/CD.
+- **Tracking** : Jira/Linear/YouTrack avec workflow dédié QA/UAT (statuts, priorités, SLA).
 - **Reporting** : tableaux de bord (Jira, Allure, ou rapports CI/CD) + synthèse hebdomadaire.
+- **Feedback UAT** : formulaires structurés, captures d’écran/vidéos, compte-rendu de session.
 
 ### 4. Responsable validation (RACI)
 
@@ -188,6 +192,7 @@ Conserver **le détail des scores** dans un tableau récapitulatif.
 - **Tech Lead** : Consulté (C) sur la faisabilité technique, impact correctifs, risques.
 - **Product Owner** : Compte (A) en UAT, donne l’acceptation finale.
 - **Équipe projet** : Informée (I) de l’état et des décisions.
+- **Responsable validation** : QA Lead en QA, Product Owner en UAT.
 
 ### 5. Délais de correction et critères de sortie
 
