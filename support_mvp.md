@@ -57,12 +57,29 @@
 ---
 
 # Ajustement de la roadmap (selon consensus)
-- **S0** : cadrage final + gel MVP strict.
-- **S1–S2** : design + specs + POC intégrations critiques.
-- **S3–S6** : build MVP strict + tests E2E minimaux.
-- **S7** : pilote interne + collecte feedback.
-- **S8** : release MVP strict.
-- **S9+** : incréments MVP étendu (par lots)
+## Planning de release (jalons + buffers)
+**Objectif** : jalonner clairement la progression, prévoir des buffers de correction et sécuriser la décision Go/No‑Go.
+
+| Semaine | Jalons | Objectifs | Livrables / preuves |
+| --- | --- | --- | --- |
+| **S0** | **Cadrage final + gel MVP strict** | Scope figé, alignement sur objectifs et risques. | Checklist cadrage signée, KPIs validés, compte‑rendu de décision. |
+| **S1–S2** | **Design + specs + POC intégrations critiques** | Spécifications prêtes pour build. | Dossier specs, maquettes validées, rapport POC. |
+| **S3–S6** | **Build MVP strict** | Delivery fonctionnel + tests E2E minimaux. | Backlog livré, rapport d’avancement, KPI dev (vélocité, qualité). |
+| **S6 (fin dev)** | **Jalon fin dev** | Code complet + stable pour QA. | Checklist fin dev, rapport de stabilité (build, tests). |
+| **S6–S7** | **QA interne** | Campagne QA + corrections critiques. | Rapport QA, matrice de release mise à jour. |
+| **S7 (fin QA)** | **Jalon fin QA** | QA validée, passage UAT. | Checklist QA, anomalies résolues/acceptées. |
+| **S7 (buffer)** | **Buffer corrections post‑QA** | Corrections bloquantes + re‑tests. | Rapport correctifs + re‑tests. |
+| **S7–S8** | **UAT** | Validation métier et cas d’usage critiques. | Rapport UAT, retours consolidés, KPI d’acceptation. |
+| **S8 (début UAT)** | **Jalon début UAT** | UAT démarrée avec périmètre figé. | Checklist début UAT, plan de test UAT. |
+| **S8 (buffer)** | **Buffer corrections post‑UAT** | Corrections UAT + validation finale. | Rapport correctifs UAT + validation. |
+| **S8 (Go/No‑Go)** | **Jalon Go/No‑Go** | Décision formalisée de release. | Compte‑rendu Go/No‑Go, checklist release, KPIs finaux. |
+| **S8** | **Release MVP strict** | Mise en production + communication. | Rapport de release, notes de version, plan de suivi. |
+| **S9+** | **Incréments MVP étendu (par lots)** | Ajouts itératifs. | Checklists de lot, rapports QA/UAT par lot. |
+
+## Alignement & communication
+- **Parties prenantes clés** : Sponsor, Product, Tech Lead, QA Lead, Ops/Support.
+- **Rituels d’alignement** : points hebdo + revue de jalons (fin dev, fin QA, début UAT, Go/No‑Go).
+- **Communication planning** : planning de release partagé (canal dédié + calendrier), mises à jour à chaque jalon avec liens vers livrables (checklists, KPI, rapports).
 
 ---
 
