@@ -10,6 +10,13 @@
 | **Rapport UAT** | Validation métier, cas d’usage critiques, retours utilisateurs. | Product Owner | ☐ OK ☐ KO |
 | **Risques ouverts** | Liste, impacts, mitigation, décision de tolérance au risque. | Risk Owner | ☐ OK ☐ KO |
 
+**Précisions minimales attendues par document :**
+- **KPI** : période de mesure, objectif cible, seuils d’alerte, écarts et tendances.
+- **Checklist** : items bloquants, items non-bloquants, preuves associées (liens).
+- **Rapport QA** : périmètre couvert, taux de succès, défauts critiques ouverts.
+- **Rapport UAT** : scénarios clés validés, restrictions d’usage, décision métier.
+- **Risques ouverts** : niveau de risque, plan de mitigation, acceptation explicite.
+
 ## 2. Documents de sortie
 
 | Document | Objectif | Livrable | Responsable (R) |
@@ -56,6 +63,8 @@
 ## 5. Modèle de compte rendu standard
 
 **Titre :** Compte rendu Go/No-Go – [Nom du projet] – [Date]
+
+**Version :** v…
 
 **Participants :**
 - …
