@@ -241,6 +241,7 @@ Ce document définit une matrice de contrôle par lot de release, les critères 
 - **Avant Go/No-Go** :
   - Revue complète de la matrice par QA + Tech Lead.
   - Vérification des preuves (captures, logs, rapports).
+  - Validation formelle consignée (QA/Tech Lead).
   - Décision Go/No-Go consignée avec le statut final du lot.
 
 ### 4) Section “preuves” (captures, logs, rapports)
@@ -256,7 +257,7 @@ Pour chaque item, joindre au minimum :
 - **Validation requise** : QA Lead + Tech Lead.
 - **Publication** :
   - Mettre la matrice à jour dans ce document.
-  - Partager le lien dans le canal release et l’ajouter au référentiel qualité interne.
+  - Partager le lien dans le canal release, consigner l’approbation QA/Tech Lead, et l’ajouter au référentiel qualité interne.
 
 ---
 
