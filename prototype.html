@@ -36,9 +36,13 @@
         <header class="topbar">
           <div>
             <h2>Bonjour Amina 👋</h2>
-            <p>Continuez votre parcours Data Analyst.</p>
+            <p>Bienvenue sur votre espace SkillForge.</p>
           </div>
-          <div class="actions">
+          <div class="topbar-actions">
+            <label class="search">
+              <span>🔎</span>
+              <input type="search" placeholder="Rechercher un parcours ou un module" />
+            </label>
             <button class="ghost">Planifier</button>
             <button class="primary">Reprendre le cours</button>
           </div>
@@ -68,13 +72,53 @@
           </article>
         </section>
 
+        <section class="stack">
+          <header class="section-header">
+            <div>
+              <h3>Parcours en cours</h3>
+              <p class="muted">Suivi des modules actifs et des prochaines étapes.</p>
+            </div>
+            <button class="ghost">Voir tout</button>
+          </header>
+          <div class="course-grid">
+            <article class="course-card">
+              <div class="course-meta">
+                <span class="pill">Data</span>
+                <span class="pill pill--warning">En cours</span>
+              </div>
+              <h4>Data Analyst · Parcours complet</h4>
+              <p class="muted">Module 3/8 · Visualisation des données</p>
+              <div class="progress">
+                <span>72%</span>
+                <div class="bar"><div class="fill" style="width:72%"></div></div>
+              </div>
+              <div class="course-actions">
+                <button class="secondary">Continuer</button>
+                <button class="ghost">Voir le plan</button>
+              </div>
+            </article>
+            <article class="course-card">
+              <div class="course-meta">
+                <span class="pill">Design</span>
+                <span class="pill pill--success">Nouveau</span>
+              </div>
+              <h4>UX Research Essentials</h4>
+              <p class="muted">Session démarrant le 2 mai · 6 semaines</p>
+              <div class="course-actions">
+                <button class="secondary">S’inscrire</button>
+                <button class="ghost">Aperçu</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section class="player">
           <div class="player-header">
             <div>
               <h3>Lecture du contenu</h3>
               <p>Module 3 · Visualisation des données</p>
             </div>
-            <div class="pill">Streaming sécurisé</div>
+            <div class="pill pill--info">Streaming sécurisé</div>
           </div>
           <div class="player-body">
             <div class="video">
@@ -102,6 +146,45 @@
           </div>
         </section>
 
+        <section class="stack">
+          <header class="section-header">
+            <div>
+              <h3>Catalogue recommandé</h3>
+              <p class="muted">Des contenus adaptés à votre profil.</p>
+            </div>
+            <button class="ghost">Explorer le catalogue</button>
+          </header>
+          <div class="catalog-grid">
+            <article class="catalog-card">
+              <div class="catalog-badge">SQL</div>
+              <h4>SQL avancé pour l’analytique</h4>
+              <p class="muted">Niveau intermédiaire · 4 h</p>
+              <div class="course-actions">
+                <button class="secondary">S’inscrire</button>
+                <button class="ghost">Détails</button>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <div class="catalog-badge">IA</div>
+              <h4>Prompting pour la data</h4>
+              <p class="muted">Niveau débutant · 2 h</p>
+              <div class="course-actions">
+                <button class="secondary">S’inscrire</button>
+                <button class="ghost">Détails</button>
+              </div>
+            </article>
+            <article class="catalog-card">
+              <div class="catalog-badge">Produit</div>
+              <h4>Data storytelling</h4>
+              <p class="muted">Niveau intermédiaire · 3 h</p>
+              <div class="course-actions">
+                <button class="secondary">S’inscrire</button>
+                <button class="ghost">Détails</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section class="grid">
           <article class="card">
             <h3>Évaluations récentes</h3>
@@ -112,12 +195,23 @@
             <button class="secondary">Voir le feedback</button>
           </article>
           <article class="card">
-            <h3>Tableau de bord formateur</h3>
-            <p class="muted">Accès réservé · rôle formateur</p>
-            <div class="tags">
-              <span>RBAC</span>
-              <span>Analytics</span>
-              <span>Exports</span>
+            <h3>Vue manager</h3>
+            <p class="muted">Coût estimé pour finir le parcours en 4 semaines.</p>
+            <div class="manager-metric">
+              <span>€ 1 240</span>
+              <p>Inclut 12 h de formation + 2 coachings</p>
+            </div>
+            <button class="ghost">Simuler un autre délai</button>
+          </article>
+          <article class="card">
+            <h3>Certification</h3>
+            <p class="muted">Complétez encore 2 modules pour débloquer le certificat.</p>
+            <div class="certificate">
+              <div class="certificate-mark">✓</div>
+              <div>
+                <strong>Certificat Data Analyst</strong>
+                <p class="muted">Date cible · 15 mai</p>
+              </div>
             </div>
           </article>
         </section>
